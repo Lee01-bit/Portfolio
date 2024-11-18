@@ -1,3 +1,29 @@
+[data-theme='light'] {
+    --background-color: #106EBE;  /* Primary color (blue) as background */
+    --text-color: #000000; /* Black text for contrast */
+    --primary-color: #106EBE; /* Blue */
+    --secondary-color: #0FFCBE; /* Mint */
+    --button-bg: #106EBE; /* Blue */
+    --button-hover-bg: #0FFCBE; /* Mint */
+    --card-bg: #ffffff; /* White cards */
+    --footer-bg: #ffffff; /* White footer */
+    --input-bg: #ffffff; /* White input background */
+    --input-color: #000000; /* Black text in inputs */
+}
+
+[data-theme='dark'] {
+    --background-color: #000000;  /* Black background */
+    --text-color: #e0e0e0; /* Light grey text */
+    --primary-color: #106EBE; /* Blue primary color */
+    --secondary-color: #0FFCBE; /* Mint accents */
+    --button-bg: #106EBE;
+    --button-hover-bg: #0FFCBE;
+    --card-bg: #282828; /* Dark card background */
+    --footer-bg: #121212; /* Dark footer background */
+    --input-bg: #333333; /* Dark input background */
+    --input-color: #ffffff; /* White text in inputs */
+}
+
 
 * {
     margin: 0;
@@ -7,25 +33,18 @@
 }
 
 body {
-    background-color: #121212; 
-    color: #e0e0e0;
     line-height: 1.6;
-}
-
-/* Header and Navbar */
-header {
-    background-color: #121212; 
-    color: white;
-    padding: 20px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--background-color);  /* Primary color as the background */
+    color: var(--text-color);  /* Set text color */
 }
 
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .navbar li {
@@ -33,33 +52,31 @@ header {
 }
 
 .navbar a {
-    color: #1e90ff; 
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #00bfff; 
+    color: var(--secondary-color); 
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #00bfff; 
+    color: var(--primary-color);
     text-decoration: none;
 }
 
-/* Hero Section Styling */
 .hero {
     height: 100vh;
-    /* background: url('/images/hero-bg.jpg') no-repeat center center/cover; */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
     position: relative;
+    padding: 20px;
 }
 
 .hero-overlay {
@@ -68,7 +85,6 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
     z-index: 1;
 }
 
@@ -83,57 +99,64 @@ header {
 
 .hero-text {
     max-width: 50%;
-    z-index: 2;
 }
 
 .hero-text h1 {
     font-size: 3rem;
-    color: #00bfff;
+    color: var(--input-bg);
     margin-bottom: 20px;
     opacity: 0;
     animation: fadeInUp 1s ease-out forwards;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 30px;
     opacity: 0;
     animation: fadeInUp 1.5s ease-out forwards;
+    color: var(--input-color);
+}
+.hero-text span{
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-decoration: underline  ;
+}
+
+#dynamic-text {
+    display: inline-block;
+    border-right: 2px solid var(--primary-color);
+    padding-right: 5px;
+    animation: blink-caret 0.7s step-end infinite;
 }
 
 .cta-button {
     padding: 10px 30px;
-    background-color: #1e90ff; 
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--input-bg);
     border: none;
     border-radius: 5px;
     text-transform: uppercase;
-    text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease;
     opacity: 0;
     animation: fadeInUp 2s ease-out forwards;
 }
 
 .cta-button:hover {
-    background-color: #00bfff; 
+    background-color: var(--button-hover-bg);
 }
 
-/* Hero Image Animation */
 .hero-image {
-    position: relative;
     width: 50%;
     opacity: 0;
-    transform: translateY(50px); 
+    transform: translateY(50px);
     animation: fadeInZoom 1.5s ease-out forwards, parallaxEffect 5s infinite linear;
 }
 
 .hero-image img {
     width: 60%;
-    border-radius: 60%;
-    box-shadow: 0 8px 25px #00bfff32; 
-    transform: scale(0.95);
-    animation: zoomIn 2s ease-out forwards; 
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(16, 110, 190, 0.3);
 }
 
 /* Keyframe Animations */
@@ -171,28 +194,21 @@ header {
     }
 }
 
-@keyframes zoomIn {
-    0% {
-        transform: scale(0.95);
-    }
-    100% {
-        transform: scale(1);
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
     }
 }
 
-
-
-/* Section Styling */
 .section {
     padding: 50px 20px;
     text-align: center;
-    background-color: #181818; 
     margin-bottom: 30px;
 }
 
 h2 {
     font-size: 2.5rem;
-    color: #00bfff; 
+    color: var(--primary-color); 
     margin-bottom: 30px;
 }
 
@@ -201,13 +217,9 @@ p {
     max-width: 800px;
     margin: 0 auto 30px;
     line-height: 1.6;
-    color: #dcdcdc; 
+    color: var(--text-color);
 }
 
-
-
-
-/* Skills Container */
 .skills-container {
     display: flex;
     justify-content: space-around;
@@ -215,49 +227,41 @@ p {
     gap: 30px;
 }
 
-/* Skill Cards */
 .skill {
-    /* background-color: #fff; */
     padding: 20px;
     width: 200px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-bg);
+    color: var(--text-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    animation: fadeInUp 1s ease-out forwards;
 }
 
-/* Add hover effect on skill cards */
 .skill:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Skill Icon */
 .skill i {
     font-size: 3rem;
-    color: #00bfff;
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 
-/* Skill Title */
 .skill h3 {
     font-size: 1.5rem;
-    color: #f5f5f5;
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 
-/* Progress Bar Container */
 .progress-bar-container {
-    background-color: #e0e0e0;
     height: 10px;
     border-radius: 5px;
     overflow: hidden;
     margin-top: 10px;
 }
 
-/* Progress Bar */
 .progress-bar {
     height: 100%;
     width: 0;
@@ -265,67 +269,30 @@ p {
     transition: width 2s ease;
 }
 
-/* Individual Progress Bar Styles */
-.html-progress {
-    background-color: #f44336; 
-}
-
-.css-progress {
-    background-color: #2196f3; 
-}
-
 .js-progress {
-    background-color: #ffeb3b; 
-}
-
-.react-progress {
-    background-color: #00bcd4;
-}
-
-/* Animation Keyframes */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Skills Animation: Trigger Progress Bars */
-@keyframes showProgress {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 70%; 
-    }
-}
-
-.js-progress {
+    background-color: #ffeb3b;
     animation: showProgress 2s forwards;
     width: 80%; 
 }
 
 .css-progress {
+    background-color: #2196f3;
     animation: showProgress 2s forwards;
     width: 85%; 
 }
 
 .html-progress {
+    background-color: #f44336;
     animation: showProgress 2s forwards;
     width: 90%;
 }
 
 .react-progress {
+    background-color: #00bcd4;
     animation: showProgress 2s forwards;
-    width: 60%; 
+    width: 60%;
 }
 
-
-/* Projects Section */
 .project-container {
     display: flex;
     justify-content: center;
@@ -334,13 +301,14 @@ p {
 }
 
 .project-card {
-    background-color: #1e1e1e; 
     width: 300px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease;
+    background-color: var(--card-bg);
+    color: var(--text-color);
 }
 
 .project-card:hover {
@@ -356,99 +324,53 @@ p {
 .project-card h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #00bfff; 
+    color: var(--primary-color); 
 }
 
 .project-card p {
     font-size: 1rem;
-    color: #dcdcdc; 
+    color: var(--text-color);
 }
 
-/* Contact Section */
 form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #1e1e1e; 
     padding: 30px;
     border-radius: 10px;
+    background-color: var(--card-bg);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-label {
-    font-size: 1rem;
-    color: #e0e0e0; 
-    display: block;
-    margin-bottom: 5px;
-}
-
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #333;
+    margin-bottom: 20px;
     border-radius: 5px;
-    margin-top: 5px;
-    background-color: #333;
-    color: white;
+    border: 1px solid #ccc;
+    background-color: var(--input-bg);
+    color: var(--input-color);
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
 }
 
 textarea {
-    resize: none;
-    min-height: 150px;
+    height: 150px;
 }
 
-button {
-    background-color: #1e90ff; /* Blue button */
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #00bfff; 
-}
-
-/* Footer */
 footer {
-    background-color: #121212; 
-    color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px 0;
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+    font-size: 1rem;
 }
 
-footer p {
-    margin-bottom: 10px;
-}
-
-.social-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-links li {
-    font-size: 1.5rem;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #1e90ff; 
-}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
