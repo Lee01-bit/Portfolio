@@ -1,27 +1,27 @@
 [data-theme='light'] {
-    --background-color: #106EBE;  /* Primary color (blue) as background */
-    --text-color: #000000; /* Black text for contrast */
-    --primary-color: #106EBE; /* Blue */
-    --secondary-color: #0FFCBE; /* Mint */
-    --button-bg: #106EBE; /* Blue */
-    --button-hover-bg: #0FFCBE; /* Mint */
-    --card-bg: #ffffff; /* White cards */
-    --footer-bg: #ffffff; /* White footer */
-    --input-bg: #ffffff; /* White input background */
-    --input-color: #000000; /* Black text in inputs */
+    --background-color: #106EBE;  
+    --text-color: #000000; 
+    --primary-color: #106EBE;
+    --secondary-color: #0FFCBE; 
+    --button-bg: #106EBE; 
+    --button-hover-bg: #0FFCBE; 
+    --card-bg: #ffffff; 
+    --footer-bg: #ffffff; 
+    --input-bg: #ffffff; 
+    --input-color: #000000; 
 }
 
 [data-theme='dark'] {
-    --background-color: #000000;  /* Black background */
-    --text-color: #e0e0e0; /* Light grey text */
-    --primary-color: #106EBE; /* Blue primary color */
-    --secondary-color: #0FFCBE; /* Mint accents */
+    --background-color: #000000;  
+    --text-color: #e0e0e0; 
+    --primary-color: #106EBE; 
+    --secondary-color: #0FFCBE; 
     --button-bg: #106EBE;
     --button-hover-bg: #0FFCBE;
-    --card-bg: #282828; /* Dark card background */
-    --footer-bg: #121212; /* Dark footer background */
-    --input-bg: #333333; /* Dark input background */
-    --input-color: #ffffff; /* White text in inputs */
+    --card-bg: #282828;
+    --footer-bg: #121212; 
+    --input-bg: #333333; 
+    --input-color: #ffffff; 
 }
 
 
@@ -35,8 +35,8 @@
 body {
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: var(--background-color);  /* Primary color as the background */
-    color: var(--text-color);  /* Set text color */
+    background-color: var(--background-color);  
+    color: var(--text-color);  
 }
 
 .navbar {
@@ -52,7 +52,7 @@ body {
 }
 
 .navbar a {
-    color: var(--text-color);
+    color: var(--secondary-color);
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
@@ -145,18 +145,22 @@ body {
 .cta-button:hover {
     background-color: var(--button-hover-bg);
 }
-
+#themeToggle{
+    padding: 10px 10px;
+    width: 5%;
+    border-radius: 10px ;
+}
 .hero-image {
     width: 50%;
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(-60px);
     animation: fadeInZoom 1.5s ease-out forwards, parallaxEffect 5s infinite linear;
 }
 
 .hero-image img {
-    width: 60%;
-    border-radius: 50%;
-    box-shadow: 0 8px 25px rgba(16, 110, 190, 0.3);
+    width: 120%;
+    /* border-radius: 50%; */
+    /* box-shadow: 0 8px 25px rgba(16, 110, 190, 0.3); */
 }
 
 /* Keyframe Animations */
@@ -278,13 +282,13 @@ p {
 .css-progress {
     background-color: #2196f3;
     animation: showProgress 2s forwards;
-    width: 85%; 
+    width: 55%; 
 }
 
 .html-progress {
     background-color: #f44336;
     animation: showProgress 2s forwards;
-    width: 90%;
+    width: 70%;
 }
 
 .react-progress {
@@ -292,12 +296,23 @@ p {
     animation: showProgress 2s forwards;
     width: 60%;
 }
+.java-progress {
+    background-color: #f5e400;
+    animation: showProgress 2s forwards;
+    width: 40%;
+}
+.python-progress {
+    background-color: #881ae2;
+    animation: showProgress 2s forwards;
+    width: 30%;
+}
 
 .project-container {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    
 }
 
 .project-card {
@@ -362,7 +377,11 @@ textarea:focus {
 textarea {
     height: 150px;
 }
-
+.tooltip{
+    padding: 20px;
+    height: 20px;
+    width: 20px;
+}
 footer {
     text-align: center;
     padding: 20px 0;
