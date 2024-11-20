@@ -484,36 +484,67 @@ aside {
 }
 
 .project-card {
-    width: 300px;
+    width: 450px;
+    height: 500px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
     background-color: var(--card-bg);
     color: var(--text-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.project-img {
-    width: 100%;
+/* Video Styling */
+.project-video {
+    width: 100%; 
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: var(--primary-color); 
+/* Paragraph Styling */
+.project-description {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.4rem;
+    margin-top: 10px;
 }
 
-.project-card p {
-    font-size: 1rem;
-    color: var(--text-color);
+/* Link Icon */
+.link-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
+.link-icon:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+/* Hover Effect */
+.project-card:hover .project-description {
+    opacity: 1;
+}
+
 .skill, .project-card {
     background-color: var(--card-bg);
     color: var(--text-color);
