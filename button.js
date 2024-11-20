@@ -15,3 +15,4 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme); // Save preference
     themeToggle.textContent = newTheme === 'dark' ? '🌞' : '🌙';
 });
+
