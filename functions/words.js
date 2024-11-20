@@ -1,12 +1,12 @@
 // Array of words to display
-const words = ["Web developer", "Designer", "Problem Solver", "Freelancer", "Team Player"];
+const words = [ "Designer", "Problem Solver", "Freelancer", "Full-Stack Developer", "Team Player"];
 const dynamicText = document.getElementById("dynamic-text");
 
 
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-const typingSpeed = 150; 
+const typingSpeed = 100; 
 const deletingSpeed = 100; 
 const delayBetweenWords = 2000; 
 
