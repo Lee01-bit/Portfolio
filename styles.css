@@ -253,6 +253,38 @@ body {
         border-color: transparent;
     }
 }
+/* About Section Styling */
+#about {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 50px 20px; /* Spacing around the section */
+    border-radius: 10px; /* Rounded corners for a polished look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 800px; /* Restrict width for readability */
+    margin: 50px auto; /* Center section on the page */
+}
+
+/* Section Title */
+#about h2 {
+    font-size: 2rem; /* Larger font size */
+    color: #333; /* Dark color for contrast */
+    text-align: center; /* Center align the title */
+    margin-bottom: 20px; /* Space below the title */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+/* About Content */
+#about p {
+    line-height: 1.8; /* Increased line height for readability */
+    color: #555; /* Softer text color */
+    font-size: 1rem; /* Standard font size */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* Highlighted Text */
+#about b {
+    color: #007bff; /* Primary color for emphasis (e.g., blue) */
+}
+
 
 .section {
     padding: 50px 20px;

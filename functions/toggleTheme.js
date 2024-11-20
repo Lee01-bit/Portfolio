@@ -12,7 +12,7 @@ themeToggle.addEventListener('click', () => {
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
     document.body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme); // Save preference
+    localStorage.setItem('theme', newTheme); 
     themeToggle.textContent = newTheme === 'dark' ? '🌞' : '🌙';
 });
 
