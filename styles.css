@@ -44,20 +44,20 @@ h2{
 /* Navbar */
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
     list-style: none;
     background-color: var(--background-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; 
+    top: 5%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 15px 30px;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
     transition: background-color 0.3s ease;
-}
-
-.navbar:hover {
-    background-color: var(--background-hover-color);
+    width: 50vw;
 }
 
 .navbar li {
@@ -100,32 +100,6 @@ h2{
 .navbar a.active {
     color: var(--primary-color);
 }
-  /* Dropdown Menu */
-  .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    background-color: var(--background-color);
-    min-width: 200px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    
-  }
-
-  .dropdown a {
-    color: var(--secondary-color);
-    padding: 10px 15px;
-  }
-
-  .dropdown a:hover {
-    background-color: var(--background-color);
-  }
-
-  /* Show Dropdown on Hover */
-  nav ul li:hover .dropdown {
-    display: block;
-  }
 
 
 /* Aside section for Icons */
@@ -248,11 +222,11 @@ aside {
 /* Image */
 .hero-image {
     position: absolute;
-    top: 40%; 
+    top: 55%; 
     left: 70%;
     transform: translate(-60%, -50%) scale(1);
     width: 60%; 
-    z-index: 2;
+    z-index: 1;
     pointer-events: none;
     animation: pulseEffect 3s infinite ease-in-out, floatEffect 5s infinite ease-in-out;
     transition: transform 0.5s ease, filter 0.5s ease; 
@@ -428,6 +402,7 @@ aside {
 .section p {
     font-size: 30px;
     font-style: italic;
+    color: var(--secondary-color);
      
 
 }
@@ -541,10 +516,10 @@ aside {
 }
 
 .project-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
     
 }
 
@@ -561,6 +536,10 @@ aside {
     overflow: hidden; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.project-card h3{
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
 
 .project-card:hover {
     transform: scale(1.05);
@@ -575,11 +554,12 @@ aside {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Paragraph Styling */
 .project-description {
     opacity: 0;
     transition: opacity 0.3s ease;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-top: 10px;
 }
 
