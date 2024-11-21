@@ -100,6 +100,32 @@ h2{
 .navbar a.active {
     color: var(--primary-color);
 }
+  /* Dropdown Menu */
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: var(--background-color);
+    min-width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    
+  }
+
+  .dropdown a {
+    color: var(--secondary-color);
+    padding: 10px 15px;
+  }
+
+  .dropdown a:hover {
+    background-color: var(--background-color);
+  }
+
+  /* Show Dropdown on Hover */
+  nav ul li:hover .dropdown {
+    display: block;
+  }
 
 
 /* Aside section for Icons */
@@ -117,7 +143,7 @@ aside {
 
 .social-links {
     font-size: 3rem;
-    color: var(--text-color);
+    color: var(--secondary-color);
     transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
@@ -174,7 +200,7 @@ aside {
     color: var(--text-color);
 }
 .hero-text span{
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.8rem;
     font-weight: 400;
     text-decoration: underline  ;
@@ -367,9 +393,47 @@ aside {
 
 
 .section {
-    padding: 50px 20px;
+    padding: 40px 20px;
     text-align: center;
-    margin-bottom: 30px;
+}
+#certificates {
+    background-color: var(--background-color);
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 80px;
+    margin-top: 20px;
+}
+
+.certificate {
+    background-color: var(--background-color);
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.certificate img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.certificate p {
+    margin-top: 10px;
+    font-size: 25px;
+    color: var(--text-color);
+}
+.section p {
+    font-size: 30px;
+    font-style: italic;
+     
+
+}
+.section h2{
+    font-size: 80px;
+    text-decoration: 3px underline;
 }
 
 
@@ -614,9 +678,4 @@ footer a:hover {
     color: var(--secondary-color);
 }
 
-.social-links{
-    color: var(--secondary-color);
-    list-style: none;
-    display: flex;
 
-}
