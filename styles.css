@@ -659,3 +659,66 @@ footer a:hover {
 }
 
 
+/* Navbar List Item */
+.navbar li {
+    position: relative; /* Needed to position the dropdown absolutely relative to the parent */
+    margin: 0 15px;
+    list-style: none;
+}
+
+/* Navbar Links */
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect for Navbar Links */
+.navbar a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position it below the parent <li> */
+    left: 0;
+    background-color: var(--background-color); /* Use consistent background */
+    min-width: 150px; /* Minimum width for dropdown */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensure it appears above other content */
+    padding: 10px 0; /* Add spacing for dropdown items */
+}
+
+/* Dropdown Links */
+.dropdown a {
+    display: block; /* Block layout for dropdown links */
+    padding: 10px 15px; /* Add padding for clickability */
+    color: var(--text-color); /* Use consistent text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Dropdown Links */
+.dropdown a:hover {
+    background-color: var(--primary-color); /* Highlight background */
+    color: var(--background-color); /* Invert text color for contrast */
+}
+
+/* Show Dropdown on Parent Hover */
+.navbar li:hover .dropdown {
+    display: block; 
+}
+
+/* Parent Link Styling */
+.navbar li > a {
+    display: inline-block;
+    position: relative;
+}
