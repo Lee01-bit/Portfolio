@@ -57,7 +57,7 @@ h2{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     border-radius: 8px; 
     transition: background-color 0.3s ease;
-    width: 50vw;
+    width: 55vw;
 }
 
 .navbar li {
@@ -165,6 +165,7 @@ aside {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 20px;
+    margin-top: 250px;
     animation: fadeInUp 1s ease-out forwards;
 }
 
@@ -658,4 +659,5 @@ footer a:hover {
     color: var(--secondary-color);
 }
 
+/* Media Queries for Responsiveness */
 
