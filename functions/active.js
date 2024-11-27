@@ -1,6 +1,8 @@
-document.querySelectorAll('.navbar a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.navbar a.active')?.classList.remove('active');
-        link.classList.add('active');
-    });
+document.getElementById('hamburgerToggle').addEventListener('click', () => {
+    const navbar = document.querySelector('.navbar');
+    const hamburger = document.querySelector('.hamburger');
+
+    // Toggle active state
+    navbar.classList.toggle('active');
+    hamburger.classList.toggle('active');
 });
