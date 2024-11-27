@@ -748,22 +748,44 @@ footer {
 .menu-toggle:checked + label .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
- /* About Section */
+ /* About  */
  #about {
-    grid-template-columns: 1fr; 
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
 }
 
 #about img {
-    max-width: 30%;
+    width: 70%;
+    margin-top: 20px;
+}
+.about-content{
+    gap: 10px;
+}
+/* Certificates Section */
+.certificates-grid {
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* Projects */
-.project-container {
-    grid-template-columns: 1fr; 
-    margin: 0 auto  ;
-    width: 500px;
+.certificate {
+    width: max-content;
+    margin: 0 auto;
 }
+.section h2{
+    font-size: 2rem;
+}
+
+.certificate img {
+    width: 100%;
+    max-width: 250px;
+}
+
+
+
+
+}
+
 
 /* Skills Section */
 .skills-container {
@@ -772,14 +794,27 @@ footer {
 }
 
 .skill {
-    width: 100%; /* Full-width on smaller screens */
+    width: 100%; 
 }
 
-/* Certificates */
-.certificates-grid {
-    grid-template-columns: 1fr; /* Stack certificates */
-    width: 400px;
+/* Projects */
+#projects {
+    padding: 40px 20px;
+}
+.project-container {
+    display: block;  
+    gap: 20px;
+}
+  .project-card {
+    width: 100%;  
     margin: 0 auto;
+    padding: 15px;
+    
+}
+
+.project-video {
+    width: 100%;
+    height: 200px;  
 }
 
 footer {
@@ -787,7 +822,11 @@ footer {
     padding: 10px;
     font-size: 0.9rem; 
 }
-}
+
+
+
+
+
 
 
 /* Responsive Styling */
