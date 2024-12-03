@@ -15,55 +15,61 @@
 </head>
 
 <body>
-
+   
     <header>
-        <nav>
-            <button class="hamburger" id="hamburgerToggle">
-                <div></div>
-                <div></div>
-                <div></div>
-            </button>
-            <ul class="navbar">
-                <li><a href="./pages/about.html">About Me</a></li>
-                <li><a href="./pages/skills.html">Skills</a></li>
-                <li><a href="./pages/projects.html">Projects</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
-                <button id="themeToggle" class="theme-toggle">🌙</button>
-            </ul>
-        </nav>
-    </header>
-    
+        <header>
+            <nav>
+                <!-- Hamburger Menu -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle" unchecked />
+                <label for="menu-toggle" class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </label>
+        
+                <!-- Navbar -->
+                <ul class="navbar">
+                    <li><a href="./pages/about.html">About Me</a></li>
+                    <li><a href="./pages/skills.html">Skills</a></li>
+                    <li><a href="./pages/projects.html">Projects</a></li>
+                    <li><a href="./pages/contact.html">Contact</a></li>
+                    <button id="themeToggle" class="theme-toggle">🌙</button>
 
+                </ul>
+            </nav>
+        </header>
+        
+
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <aside>
-            <a href="https://github.com/Lee01-bit"><i class="fa-brands fa-github social-links"></a></i>
-            <a href="www.linkedin.com/in"><i class="fa-brands fa-linkedin social-links"></a></i>
-        </aside>
-        <div class="hero-overlay"></div>
         <div class="hero-content">
+          
             <div class="hero-text">
-                <h1 class="animate-text">Welcome to My Portfolio</h1>
-                <p class="animate-text">"Hi, I’m Mogamat Jaleel Lee, A <span id="dynamic-text">Web Developer</span> specializing in 
-                    crafting cutting-edge, user-focused applications that solve real-world problems."</p>
-                              
-                <a href="./pages/Contact.html" class="cta-button animate-button">Get in Touch</a>
+                <h1>Hi, I’m Mogamat Jaleel Lee</h1>
+                <p>A passionate Web Developer who loves to create user-centric applications.</p>
+                <p>I'm a <span id="dynamic-text">Web Developer</span> specializing in cutting-edge applications.</p>
+                <aside class="social-links-container">
+                    <a href="https://github.com/Lee01-bit"><i class="fa-brands fa-github social-links"></i></a>
+                    <a href="www.linkedin.com/in"><i class="fa-brands fa-linkedin social-links"></i></a>
+                </aside>
+                <a href="./pages/contact.html" class="cta-button">Get in Touch</a>
             </div>
-            <div class="hero-image animate-image">
-                <img src="./media/Capture-removebg-preview.png" alt="Mogamat Jaleel Lee" />
+            <div class="hero-image">
+                <img src="./media/Capture-removebg-preview.png" alt="Mogamat Jaleel Lee">
             </div>
         </div>
     </section>
 
+
+   
     <footer>
         <p>&copy; 2024 Mogamat Jaleel Lee. All rights reserved.</p>
-
     </footer>
 
     <script src="./functions/toggleTheme.js"></script>
     <script src="./functions/words.js"></script>
-    <script src="./functions/active.js"></script>
-
 
 </body>
+
 
 </html>

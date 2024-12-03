@@ -7,11 +7,19 @@
         <meta name="author" content="Mogamat Jaleel Lee">
         <link rel="stylesheet" href="/styles.css">
         <title>Mogamat Jaleel Lee - Web Developer Portfolio/skills</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/1475cbfb76.js" crossorigin="anonymous"></script>
     </head>
 <body>
     <header>
         <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" unchecked />
+            <label for="menu-toggle" class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </label>
+            
             <ul class="navbar">
                 <li><a href="../index.html" >Home</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -25,6 +33,7 @@
     </header>
     <section id="skills" class="section">
         <h2>My Skills</h2>
+        <p class="certificate-info">I’m a passionate and adaptable developer with expertise in web development and a solid foundation in modern frontend and backend technologies</p>
         <div class="skills-container">
            
             <div class="skill animate-skill">
@@ -73,10 +82,29 @@
                     <div class="progress-bar python-progress"></div>
                 </div>
             </div>
+            <div class="skill animate-skill">
+                <i class="fab fa-figma figma"></i>
+                <h3>Figma</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar figma-progress"></div>
+                </div>
+            </div>
+            <div class="skill animate-skill">
+                <i class="fa-solid fa-fire firebase"></i>
+                <h3>Firebase</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar firebase-progress"></div>
+                </div>
+            </div>
+            
+            
         </div>
     </section>
+    <footer>
+        <p>&copy; 2024 Mogamat Jaleel Lee. All rights reserved.</p>
+    </footer>
+
     <script src="../functions/toggleTheme.js"></script>
-    <script src="../functions/active.js"></script>
 
 
 </body>
